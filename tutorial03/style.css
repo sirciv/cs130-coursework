@@ -1,0 +1,98 @@
+
+.container {
+   color: rgb(255, 255, 255);
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.3fr 1fr 1fr;
+   grid-template-areas: 
+      "a . b b"
+      "c d e f"
+      "g g g f"; 
+   min-height: 100vh;
+   padding: 50px;
+}
+
+@media (max-width: 1024px) {
+   .container {
+      color: rgb(255, 255, 255);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.65fr 0.5fr 2fr 1.5fr 0.5fr;
+      grid-template-areas: 
+         "a a b b"
+         "f f f f"
+         "c c d d"
+         "e e e e"
+         "g g g g"; 
+      min-height: 100vh;
+      padding: 50px;
+   }
+}
+
+@media (max-width: 600px) {
+   .container {
+      color: rgb(255, 255, 255);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 2fr 2fr 2fr 2fr 2fr;
+      grid-template-areas: 
+         "a ."
+         "b b"
+         "c c"
+         "d d"
+         "e e"
+         "g g"
+         "f f"; 
+      min-height: 100vh;
+      padding: 50px;
+   }
+}
+
+article, aside, section, main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 15px;
+}
+
+.card1 {
+   grid-area: c;
+   background: rgb(71, 162, 203);
+   color: rgb(54, 54, 54);
+}
+
+.card2 {
+   grid-area: d;
+   background: rgb(71, 162, 203);
+   color: rgb(54, 54, 54);
+}
+
+.card3{
+   grid-area: e;
+   background: rgb(71, 162, 203);
+   color: rgb(54, 54, 54);
+}
+
+.main{
+   grid-area: g;
+   background: rgb(71, 162, 203);
+   color: rgb(54, 54, 54);
+}
+
+.aside{
+   grid-area: f;
+   background: rgb(54, 54, 54);
+   color: rgb(255, 255, 255);
+}
+
+.menu1 {
+   grid-area: a;
+   background: rgb(204, 48, 124);
+   margin-right: 30%;
+}
+
+.menu2 {
+   grid-area: b;
+   background: rgb(253, 240, 80);
+   color: rgb(54, 54, 54);
+}
