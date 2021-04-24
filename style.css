@@ -9,14 +9,17 @@
 
 body {
     margin: 0px;
-    font-family: monospace, Arial, sans-serif;
+    font-family: Courier;
 }
-header, section {
+header {
     padding: 20px;
     font-family: 'Roboto', sans-serif;
 }
 p, li {
     line-height: 1.5em;
+}
+section {
+    padding: 20px;
 }
 
 #inspiration {
