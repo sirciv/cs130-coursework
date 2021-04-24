@@ -4,7 +4,7 @@
 
 body {
     margin: 0px;
-    font-family: Courier, Arial, sans-serif;
+    font-family: monospace, Arial, sans-serif;
 }
 header, section {
     padding: 20px;
