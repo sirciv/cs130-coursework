@@ -2,12 +2,18 @@
     box-sizing: border-box;
 }
 
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+}
+
 body {
     margin: 0px;
     font-family: monospace, Arial, sans-serif;
 }
 header, section {
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 p, li {
     line-height: 1.5em;
