@@ -10,6 +10,9 @@ header {
     padding: 20px;
     font-family: 'Roboto', sans-serif;
 }
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
 p, li {
     line-height: 1.5em;
 }
