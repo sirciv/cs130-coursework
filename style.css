@@ -1,15 +1,10 @@
 * {
     box-sizing: border-box;
-}
-
-.ascii-art {
-    font-family: monospace;
-    white-space: pre;
+    font-family: Courier
 }
 
 body {
     margin: 0px;
-    font-family: Courier;
 }
 header {
     padding: 20px;
