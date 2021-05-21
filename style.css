@@ -21,6 +21,12 @@ section {
 }
 
 #inspiration {
+    background-color: cornsilk;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#finalproject {
     background-color: orange;
     padding-top: 50px;
     padding-bottom: 50px;

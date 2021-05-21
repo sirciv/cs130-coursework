@@ -1,6 +1,6 @@
 //scrolling logo code
 
-var leftgear = document.getElementById("leftgear");
+var gearlogo = document.getElementById("gearlogo");
 
 ;(function() {
     var throttle = function(type, name, obj) {
@@ -20,5 +20,5 @@ var leftgear = document.getElementById("leftgear");
 })();
     
 window.addEventListener("optimizedScroll", function() {
-    leftgear.style.transform = "rotate("+window.pageYOffset+"deg)";
+    gearlogo.style.transform = "rotate("+window.pageYOffset+"deg)";
 });
