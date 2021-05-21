@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+body {
+    margin: 0px;
+}
+header {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+p, li {
+    line-height: 1.5em;
+}
+section {
+    padding: 20px;
+}
+
+#gearbox {
+    display: flex;
+    justify-content: space-between;
+}
+#leftgear {
+    width: 20vw;
+    max-width: 20%;
+    height: 20%;
+}
