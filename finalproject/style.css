@@ -4,11 +4,34 @@
 }
 
 body {
+    overflow: hidden;
     margin: 0px;
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+       "logo main"
+       "left main";
+    height: 100vh;
+}
+aside {
+    grid-area: left;
+    border: 1px dotted black;
 }
 header {
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
+}
+main {
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: auto;
+    overflow-y: auto;
+    z-index: 3;
+    border: 1px dotted black;
 }
 p, li {
     line-height: 1.5em;
@@ -20,9 +43,9 @@ section {
 #gearbox {
     display: flex;
     justify-content: space-between;
+    grid-area: logo;
 }
 #gearlogo {
-    width: 20vw;
-    max-width: 20%;
-    height: 20%;
+    height: 120px;
+    width: auto;
 }
