@@ -27,7 +27,7 @@ window.addEventListener("optimizedScroll", function() {
 // 2. CONTENT SELECTION FUNCTIONS
 
 const loadChapter = (contentNumber) => {
-    let contentURL = `content/c${contentNumber}.html`;
+    let contentURL = `content/c${contentNumber}.html/`;
     console.log('loading content: '+contentURL);
     getChapter(contentURL);
 };
