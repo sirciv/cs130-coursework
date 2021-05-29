@@ -1,11 +1,10 @@
 * {
-    box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 body {
     overflow: hidden;
-    margin: 0px;
+    margin: 3vw;
     display: grid;
     grid-template-columns: 150px auto;
     grid-template-rows: 150px auto;
@@ -13,10 +12,6 @@ body {
        "logo main"
        "left main";
     height: 100vh;
-}
-aside {
-    grid-area: left;
-    border: 1px dotted black;
 }
 header {
     position: fixed;
@@ -43,9 +38,18 @@ section {
 #gearbox {
     display: flex;
     justify-content: space-between;
+    margin: auto;
     grid-area: logo;
 }
 #gearlogo {
     height: 120px;
     width: auto;
+}
+
+/* #topheader {
+    grid-area: top;
+} */
+
+#sidebar {
+    grid-area: left;
 }
