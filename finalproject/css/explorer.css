@@ -8,7 +8,7 @@
       margin-top: 5vh;
       margin-bottom: 5vh;
       grid-template-columns: 200px 1fr;
-      grid-template-rows: 180px 60vh 20vh 200vh 100px;
+      grid-template-rows: 180px 60vh 15vh 200vh 100px;
       grid-gap: 1.5rem;
       grid-template-areas:
           "gear header"
@@ -58,10 +58,15 @@
     background-color: #1EAAFC;
     background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
   }
+
+  .content-1 {
+    background-color: #1EAAFC;
+    background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+  }
   
   .sidebar {
     background-color: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: fixed;
     top: 269px;
   }
@@ -77,22 +82,17 @@
   #gearlogo {
     height: 180px;
     width: auto;
+    user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
   }
 
-  h2 {
+  h1, h2, p {
     margin-top: 0px;
+    margin-bottom: 0px;
   }
-  
-  .content-1,
-  .content-2,
-  .content-3 {
-    background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
-  }
-  
-  /* .footer {
-    background-color: #6C52D9;
-    background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
-  } */
 
   .body{
     height:2000px;
@@ -111,5 +111,12 @@
     position:fixed;
     bottom:20px;
     left:50px;
+  }
+
+  ::selection {
+    background: #fa8334; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #fa8334; /* Gecko Browsers */
   }
   
