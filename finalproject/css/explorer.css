@@ -90,6 +90,8 @@
   
   .sidebar {
     background-color: white;
+    position: fixed;
+
   }
   
   .content-1,
@@ -98,7 +100,36 @@
     background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
   }
   
-  .footer {
+  /* .footer {
     background-color: #6C52D9;
     background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+  } */
+
+  .body{
+    height:2000px;
+    margin:5px auto;
+    width:100%;
+    text-align:center;
+    font-size:1.3em;
   }
+  
+  .goto-top{
+     margin-left:-100%;
+     position:fixed;
+     bottom:20px;
+     right:50px;
+   }
+  
+  p{
+    color:blue;
+  }
+  p:hover{
+    cursor:pointer;
+  }
+  #goto-topJS{
+    margin-left:1%;
+    position:fixed;
+    bottom:20px;
+    left:50px;
+  }
+  

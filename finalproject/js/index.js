@@ -1,4 +1,3 @@
-
 // 1. SCROLLING LOGO
 
 var gearlogo = document.getElementById("gearlogo");
@@ -20,8 +19,9 @@ var gearlogo = document.getElementById("gearlogo");
     throttle ("scroll", "optimizedScroll");
 })();
     
-window.addEventListener("optimizedScroll", function() {
-    gearlogo.style.transform = "rotate("+window.pageYOffset+"deg)";
+window.addEventListener("optimizedScroll", function() { 
+    let speedAdjust = window.pageYOffset / 8;
+    gearlogo.style.transform = "rotate("+speedAdjust+"deg)";
 });
 
 // 2. CONTENT SELECTION FUNCTIONS
@@ -41,10 +41,29 @@ const getChapter = (url) => {
         })
 };
 
-// 3. MAPPING SIDEBAR TO CONTENT
+//3. SCROLL TO TOP
+
+  var toTop = document.getElementById("goto-topJS");
+    
+    toTop.addEventListener("click", function(){
+    scrollToTop(500);
+  });
+  function scrollToTop(scrollDuration) {
+      var scrollStep = -window.scrollY / (scrollDuration / 15),
+          scrollInterval = setInterval(function(){
+          if ( window.scrollY != 0 ) {
+              window.scrollBy( 0, scrollStep );
+          }
+          else clearInterval(scrollInterval); 
+      },15);
+  }
+
+// 4. csi.js -- CUT
+
+// 4. MAPPING SIDEBAR TO CONTENT
 //TODO: This should generate automatically
 
-document.querySelector('#c1').onmouseover = loadChapter(1);
-document.querySelector('#c2').onclick = loadChapter(2);
-document.querySelector('#c3').onclick = loadChapter(3);
+// document.querySelector('#c1').onmouseover = loadChapter(1);
+// document.querySelector('#c2').onclick = loadChapter(2);
+// document.querySelector('#c3').onclick = loadChapter(3);
 
