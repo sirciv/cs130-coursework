@@ -17,13 +17,12 @@
       margin-top: 5vh;
       margin-bottom: 5vh;
       grid-template-columns: 200px 1fr;
-      grid-template-rows: 180px 60vh 8vh 200vh 100px;
+      grid-template-rows: 180px 60vh 200vh 100px;
       grid-gap: 1.5rem;
       grid-template-areas:
           "gear header"
           "sidebar content-1"
           "sidebar content-2"
-          "sidebar content-3"
           "sidebar footer";
       }
 
@@ -41,10 +40,6 @@
 
       .content-2 {
       grid-area: content-2;
-      }
-
-      .content-3 {
-      grid-area: content-3;
       }
 
       .footer {

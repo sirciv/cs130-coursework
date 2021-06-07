@@ -27,32 +27,24 @@ window.addEventListener("optimizedScroll", function() {
 // 2. CONTENT SELECTION FUNCTIONS
 
 const loadContent = (contentNumber) => {
-    let content2url = `/content/c${contentNumber}/c${contentNumber}title.html/`;
-    let content3url = `/content/c${contentNumber}/c${contentNumber}.html/`;
-    console.log('loading content: ' + contentNumber);
+    let content2url = `/finalproject/content/c${contentNumber}/c${contentNumber}.txt`;
     scrollToTop(500);
-    document.querySelector('.content-1').innerHTML = `<img src="/content/c${contentNumber}/c${contentNumber}.jpg">`;
-    document.querySelector('.content-2').innerHTML = getContent(content2url);
-    document.querySelector('.content-3').innerHTML = getContent(content3url);
+    document.querySelector('.content-1').innerHTML = `<img src="/finalproject/content/c${contentNumber}/c${contentNumber}.jpg">`;
+    getContent(content2url);
 };
 
 const getContent = (url) => {
-    console.log('fetching content');
     fetch(url)
         .then(response => response.text())
-        .then(html => {
-            document.querySelector('.content-3').innerHTML = html;
+        .then(data => {
+            console.log(data);
+            document.querySelector('.content-2').innerHTML = data;
         })
 };
 
 //3. SCROLL TO TOP
 
-  var toTop = document.getElementById("goto-topJS");
-    toTop.addEventListener("click", function(){
-    scrollToTop(500);
-  });
-
-  function scrollToTop(scrollDuration) {
+function scrollToTop(scrollDuration) {
       var scrollStep = -window.scrollY / (scrollDuration / 15),
           scrollInterval = setInterval(function(){
           if ( window.scrollY != 0 ) {
