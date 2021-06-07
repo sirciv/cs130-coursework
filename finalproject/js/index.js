@@ -29,7 +29,7 @@ window.addEventListener("optimizedScroll", function() {
 const loadContent = (contentNumber) => {
     let content2url = `/cs130-coursework/finalproject/content/c${contentNumber}/c${contentNumber}.txt`;
     scrollToTop(500);
-    document.querySelector('.content-1').innerHTML = `<img src="/finalproject/content/c${contentNumber}/c${contentNumber}.jpg">`;
+    document.querySelector('.content-1').innerHTML = `<img src="/cs130-coursework/finalproject/content/c${contentNumber}/c${contentNumber}.jpg">`;
     getContent(content2url);
 };
 
