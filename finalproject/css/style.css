@@ -17,7 +17,7 @@
       margin-top: 5vh;
       margin-bottom: 5vh;
       grid-template-columns: 200px 1fr;
-      grid-template-rows: 180px 60vh 200vh 100px;
+      grid-template-rows: 180px 60vh 150vh 100px;
       grid-gap: 1.5rem;
       grid-template-areas:
           "gear header"
