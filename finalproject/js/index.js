@@ -26,28 +26,32 @@ window.addEventListener("optimizedScroll", function() {
 
 // 2. CONTENT SELECTION FUNCTIONS
 
-const loadChapter = (contentNumber) => {
-    let contentURL = `content/c${contentNumber}.html/`;
-    console.log('loading content: '+contentURL);
-    getChapter(contentURL);
+const loadContent = (contentNumber) => {
+    let content2url = `/content/c${contentNumber}/c${contentNumber}title.html/`;
+    let content3url = `/content/c${contentNumber}/c${contentNumber}.html/`;
+    console.log('loading content: ' + contentNumber);
+    scrollToTop(500);
+    document.querySelector('.content-1').innerHTML = `<img src="/content/c${contentNumber}/c${contentNumber}.jpg">`;
+    document.querySelector('.content-2').innerHTML = getContent(content2url);
+    document.querySelector('.content-3').innerHTML = getContent(content3url);
 };
 
-const getChapter = (url) => {
-    console.log('fetching chapter');
+const getContent = (url) => {
+    console.log('fetching content');
     fetch(url)
         .then(response => response.text())
         .then(html => {
-            document.querySelector('.content').innerHTML = html;
+            document.querySelector('.content-3').innerHTML = html;
         })
 };
 
 //3. SCROLL TO TOP
 
   var toTop = document.getElementById("goto-topJS");
-    
     toTop.addEventListener("click", function(){
     scrollToTop(500);
   });
+
   function scrollToTop(scrollDuration) {
       var scrollStep = -window.scrollY / (scrollDuration / 15),
           scrollInterval = setInterval(function(){
@@ -57,13 +61,3 @@ const getChapter = (url) => {
           else clearInterval(scrollInterval); 
       },15);
   }
-
-// 4. csi.js -- CUT
-
-// 4. MAPPING SIDEBAR TO CONTENT
-//TODO: This should generate automatically
-
-// document.querySelector('#c1').onmouseover = loadChapter(1);
-// document.querySelector('#c2').onclick = loadChapter(2);
-// document.querySelector('#c3').onclick = loadChapter(3);
-
