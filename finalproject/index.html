@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CS130 -- main page</title>       
+        <title>CS130 -- explorer</title>       
         <link rel="stylesheet" href="css/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +11,31 @@
             <div class="gearbox">
                 <img src="logo.png" alt id="gearlogo">
             </div>
-            <div class="header">header</div>
-            <div class="sidebar"></div>
+            <div class="header">
+                <img src="header.png" alt id="myHeader">
+            </div>
+            <div class="sidebar">
+                <h2>Category A
+                    <h3 onclick="loadContent(1)">Content 1</h3><br>
+                    <h3 onclick="loadContent(2)">Content 2</h3><br>
+                </h2><br>
+                <h2>Category B
+                    <h3 onclick="loadContent(3)">Content 3</h3><br>
+                </h2><br>
+                <h2>Category C
+                </h2>
+            </div>
             <div class="content-1">
-                <main>
-                    <!-- content goes here -->
-                </main>
+
+            </div>
+            <div class="content-2">
+
             </div>
             <div class="footer">
-                <a href="./explorer.html">Go to explorer page!</a><br>
+                <div>
+                    <a id="bottom-message">(c) spencer allan, 2021. (っ＾▿＾）</a>
+                </div>
             </div>
-          </div>
-      <script type="text/javascript" src="js/index.js"></script>
+        </div>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
